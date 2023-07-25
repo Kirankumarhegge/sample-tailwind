@@ -1,0 +1,317 @@
+
+
+<!DOCTYPE html>
+<html lang="en" class="" id="main">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my website</title>
+    <link rel="stylesheet" href="../public/index.css">
+</head> 
+<body>
+    <!-- nav bar first -->
+    <div class="bg-gray-300 dark:bg-gray-800 z-40 sticky top-0 h-fit flex flex-wrap justify-between">
+        <div class="lg:w-1/3 md:w-1/3 sm:w-2/7 xs:1/2 text-2xl flex items-center pl-6 py-3">
+            <button class="text-gray-800 dark:text-gray-600 rotate-90 px-4">
+                |||
+            </button>
+            <div class=" flex justify-center relative overflow-hidden group">
+                <div class="flex cursor-pointer bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-red-700">
+                    Tailwind
+                </div>
+                <div class="absolute bottom-0 left-3 h-0.5 pr-6 w-[100%] bg-gray-200 dark:bg-gray-600 transition-transform -translate-x-28 group-hover:-translate-x-3 duration-700">
+                </div>
+            </div>
+            
+        </div>
+        <div class="lg:w-1/3 md:w-1/3 sm:w-max xs:1/2 flex items-center justify-around ">
+            <div class="flex relative w-[100%] xs:hidden sm:block md:block lg:block">
+                <input type="search" class="p-2.5 w-full text-sm text-gray-700 bg-gray-200 rounded-l-full border-l-gray-500 border-l-2 border border-gray-500 focus:ring-blue-500 
+                    focus:border-blue-500 dark:bg-gray-700 dark:border-l-gray-600  dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-200 
+                    dark:focus:border-gray-500" placeholder="Search...">
+                <button type="submit" class="absolute top-0 -right-9 h-full p-2.5 text-sm font-medium text-gray-700 bg-gray-300 hover:bg-gray-200 rounded-r-full 
+                    border border-gray-500 focus:ring-1 focus:outline-none focus:ring-gray-300 dark:text-gray-300 dark:bg-gray-500 dark:hover:bg-gray-600 
+                    dark:focus:ring-gray-700">
+                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="lg:w-1/3 md:w-1/3 sm:w-2/7 xs:1/2 flex justify-end items-center py-1 text-gray-800 dark:text-gray-200">
+            <div class="text-2xl">
+                <label class="relative flex items-center">
+                    <input type="checkbox" value="" class="sr-only peer">
+                    <div onclick="darkTheme()"  class="w-11 h-6 bg-gray-100 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-gray-300 dark:peer-focus:ring-gray-600 rounded-full peer 
+                        dark:bg-gray-200 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] 
+                        after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all 
+                        dark:border-gray-600 peer-checked:bg-gray-700 cursor-pointer">
+                    </div>
+                </label>
+            </div>
+            <span class="ml-3 text-sm font-medium cursor-default text-gray-900 dark:text-gray-300">Mode</span>
+            <div class="px-2 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16"> <path d="M8 16a2 2 0 0 0 2-2H6a2 
+                    2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 
+                    8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44
+                     4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/> </svg>
+            </div>
+
+            
+            <div class="">
+                <div onclick="profile()" class="pr-6 cursor-pointer overflow-hidden relative">
+                    <img class="h-[2.4rem] w-[2.4rem]  border-2  border-gray-300 rounded-full" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" />
+                </div>
+                <div class="absolute z-10 top-[50px] right-6 rounded w-[250px] border-2 border-gray-400 backdrop-blur-md dark:backdrop-blur-xl shadow-md p-2 hidden" id="profileContent" >
+                    <a href="#" class="block rounded-r-lg py-2 px-4 hover:border-l-white hover:border-l-4 hover:bg-gray-800 hover:text-white">Create Channel</a>
+                    <a href="#" class="block rounded-r-lg py-2 px-4 hover:border-l-white hover:border-l-4 hover:bg-gray-800 hover:text-white">YouTube Studio</a>
+                    <a href="#" class="block rounded-r-lg py-2 px-4 hover:border-l-white hover:border-l-4 hover:bg-gray-800 hover:text-white">Switch Account</a>
+                    <a href="#" class="block rounded-r-lg py-2 px-4 hover:border-l-white hover:border-l-4 hover:bg-gray-800 hover:text-white">Sign Out</a>
+                    <a href="#" class="block rounded-r-lg py-2 px-4 hover:border-l-white hover:border-l-4 hover:bg-gray-800 hover:text-white">Purchase and Membership</a>
+                    <a href="#" class="block rounded-r-lg py-2 px-4 hover:border-l-white hover:border-l-4 hover:bg-gray-800 hover:text-white">Your Data in YouTube</a>
+                    <a href="#" class="block rounded-r-lg py-2 px-4 hover:border-l-white hover:border-l-4 hover:bg-gray-800 hover:text-white">Appearence</a>
+                    <a href="#" class="block rounded-r-lg py-2 px-4 hover:border-l-white hover:border-l-4 hover:bg-gray-800 hover:text-white">Language</a>
+                    <a href="#" class="block rounded-r-lg py-2 px-4 hover:border-l-white hover:border-l-4 hover:bg-gray-800 hover:text-white">Restricted Mode:Off</a>
+                    <a href="#" class="block rounded-r-lg py-2 px-4 hover:border-l-white hover:border-l-4 hover:bg-gray-800 hover:text-white">Location:India</a>
+                    <a href="#" class="block rounded-r-lg py-2 px-4 hover:border-l-white hover:border-l-4 hover:bg-gray-800 hover:text-white">KeyBoard Shortcuts</a>
+                    <a href="#" class="block rounded-r-lg py-2 px-4 hover:border-l-white hover:border-l-4 hover:bg-gray-800 hover:text-white">Settings</a>
+                    <a href="#" class="block rounded-r-lg py-2 px-4 hover:border-l-white hover:border-l-4 hover:bg-gray-800 hover:text-white">Help</a>
+                    <a href="#" class="block rounded-r-lg py-2 px-4 hover:border-l-white hover:border-l-4 hover:bg-gray-800 hover:text-white">Feedback</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- second nav bar -->
+    <div class="bg-gray-200 dark:bg-gray-700 h-fit flex flex-col items-center justify-around">
+        <div class="w-[60%] h-[20%] p-2">
+            <h2 class="text-gray-700 cursor-default text-center dark:text-white">Go to inspect and change the dimension to see the responsiveness. 
+                The reason to build this website is to learn flex, grid, relative, static and absolute.</h2>
+        </div>
+        <div class="w-[90%] h-[60%] bg-gray-300 text-gray-800 dark:text-gray-200 dark:bg-gray-800 rounded-lg p-2 flex items-center justify-between">
+            <button class="text-2xl ease-in duration-500 text-gray-500 hover:text-gray-700 bg-gray-200 hover:bg-gray-400 dark:text-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 rounded-lg p-2 ">
+                Home
+            </button>
+            <button class="text-2xl ease-in duration-500 text-gray-500 hover:text-gray-700 bg-gray-200 hover:bg-gray-400 dark:text-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 rounded-lg p-2  hidden sm:block md:block">
+                Career
+            </button>
+            <button class="text-2xl ease-in duration-500 text-gray-500 hover:text-gray-700 bg-gray-200 hover:bg-gray-400 dark:text-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 rounded-lg p-2 hidden sm:block md:block">
+                About
+            </button>
+            <button class="text-2xl ease-in duration-500 text-gray-500 hover:text-gray-700 bg-gray-200 hover:bg-gray-400 dark:text-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 rounded-lg p-2 hidden sm:block md:block">
+                Contact
+            </button>
+            <button onclick="dropdown()"  class="relative z-0 cursor-pointer text-2xl bg-gray-200 dark:bg-gray-700 rounded-lg  px-3 pb-2 rotate-90 sm:hidden">
+                |||
+            </button>
+            <div class="absolute top-[137px] right-9 rounded w-[250px] border-2 border-gray-400 dark:bg-gray-700 shadow-md p-2 hidden sm:hidden" id="dropdownContent" >
+                <a href="#" class="block rounded-r-lg py-2 px-4 hover:border-l-white hover:border-l-4 hover:bg-gray-800 hover:text-white">Career</a>
+                <a href="#" class="block rounded-r-lg py-2 px-4 hover:border-l-white hover:border-l-4 hover:bg-gray-800 hover:text-white">About</a>
+                <a href="#" class="block rounded-r-lg py-2 px-4 hover:border-l-white hover:border-l-4 hover:bg-gray-800 hover:text-white">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="h-fit w-[100%] pt-10 bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
+        <div class="p-5 bg-gray-300 dark:bg-gray-800 rounded-lg flex justify-center w-[90%]">
+            <div class="flex overflow-x-auto space-x-4 py-5">
+                <div class="flex-shrink-0 w-64 bg-gray-200 rounded-lg overflow-hidden">
+                  <img src="https://images.pexels.com/photos/998587/pexels-photo-998587.jpeg?auto=compress&cs=tinysrgb&w=800" class="w-full h-40 transition ease-linear hover:-translate-y-1 hover:scale-110 duration-500 grayscale hover:grayscale-0" />
+                  <div class="p-4 bg-zinc-200 dark:bg-zinc-700 rounded-b-lg">
+                    <h2 class="text-lg text-gray-700 dark:text-gray-300">Accessories</h2>
+                    <p class="text-sm text-gray-700 dark:text-gray-300"> Sketch Pens.</p>
+                  </div>
+                </div>
+            
+                <div class="flex-shrink-0 relative w-64 h-78 overflow-hidden rounded-lg group">
+                    <img src="https://images.pexels.com/photos/716661/pexels-photo-716661.jpeg?auto=compress&cs=tinysrgb&w=800" class="w-full h-full object-cover rounded-lg transition-all duration-700" />
+                    <div class="absolute top-0 left-0 w-full h-full p-4 rounded-lg backdrop-blur bg-opacity-75 opacity-0 group-hover:opacity-100 duration-700">
+                      <p class="text-lg text-gray-700 dark:text-gray-300">Design</p>
+                      <p class="text-sm text-gray-700 dark:text-gray-300">Use Pen and Paper.</p>
+                    </div>
+                  </div>
+                  <div class="flex-shrink-0 relative w-64 h-78 overflow-hidden rounded-lg group">
+                    <img src="https://images.pexels.com/photos/392018/pexels-photo-392018.jpeg?auto=compress&cs=tinysrgb&w=800" class="w-full h-full object-cover rounded-lg group-hover:grayscale transition-all duration-700" />
+                    <div class="absolute bottom-0 left-0 w-full p-5 rounded-b-lg bg-zinc-200 dark:bg-zinc-700 transition-transform translate-x-full group-hover:translate-x-0 duration-700">
+                      <p class="text-lg text-gray-700 dark:text-gray-300">Implement</p>
+                      <p class="text-sm text-gray-700 dark:text-gray-300">Code What You Think.</p>
+                    </div>
+                  </div>
+                  
+                  <div class="flex-shrink-0 relative w-64 h-78 overflow-hidden rounded-lg group">
+                    <img src="https://images.pexels.com/photos/1714202/pexels-photo-1714202.jpeg?auto=compress&cs=tinysrgb&w=800" class="w-full h-full object-cover rounded-lg group-hover:grayscale transition-all duration-700" />
+                    <div class="absolute bottom-0 left-0 w-full p-5 rounded-b-lg bg-zinc-200 dark:bg-zinc-700 transition-transform translate-y-full group-hover:translate-y-0 duration-700">
+                      <p class="text-lg text-gray-700 dark:text-gray-300">Deploy</p>
+                      <p class="text-sm text-gray-700 dark:text-gray-300">Anyone can see it.</p>
+                    </div>
+                  </div>
+                  
+
+                  <div class="flex-shrink-0 relative overflow-hidden h-[15rem] w-[16rem] group">
+                    <img src="https://images.pexels.com/photos/5384623/pexels-photo-5384623.jpeg?auto=compress&cs=tinysrgb&w=800" class="object-cover rounded-lg overflow-hidden w-[88%] h-[70%] absolute top-0 left-4 z-10 grayscale group-hover:grayscale-0 transition ease-linear hover:scale-95 duration-500" />
+                    <div class="bg-zinc-200 dark:bg-zinc-700 h-[91.5%] w-full rounded-lg absolute top-5 left-0 duration-500"></div>
+                    <div class="absolute bottom-6 left-5 transition-transform -translate-y-full group-hover:translate-y-3 duration-500">
+                        <p class="text-lg text-gray-700 dark:text-gray-300">Team</p>
+                        <p class="text-sm text-gray-700 dark:text-gray-300">Life turning point.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="h-fit w-[100%] pt-10 bg-gray-200 dark:bg-gray-700 flex flex-col items-center justify-center">
+        <div class="p-5 bg-gray-300 dark:bg-gray-800 rounded-lg flex flex-col h-[20rem] w-[19rem]">
+            <div class="flex flex-col overflow-y-auto space-y-4 py-5">
+                <div class="flex-shrink-0 w-full bg-gray-200 rounded-lg overflow-hidden">
+                  <img src="https://images.pexels.com/photos/998587/pexels-photo-998587.jpeg?auto=compress&cs=tinysrgb&w=800" class="w-full h-40 transition ease-linear hover:-translate-y-1 hover:scale-110 duration-500 grayscale hover:grayscale-0" />
+                  <div class="p-4 bg-zinc-200 dark:bg-zinc-700  rounded-b-lg">
+                    <h2 class="text-lg text-gray-700 dark:text-gray-300">Accessories</h2>
+                    <p class="text-sm text-gray-700 dark:text-gray-300"> Sketch Pens.</p>
+                  </div>
+                </div>
+            
+                <div class="flex-shrink-0 relative w-full h-78 overflow-hidden rounded-lg group">
+                    <img src="https://images.pexels.com/photos/716661/pexels-photo-716661.jpeg?auto=compress&cs=tinysrgb&w=800" class="w-full h-full object-cover rounded-lg transition-all duration-700" />
+                    <div class="absolute top-0 left-0 w-full h-full p-4 rounded-lg backdrop-blur bg-opacity-75 opacity-0 group-hover:opacity-100 duration-700">
+                      <p class="text-lg text-gray-700 dark:text-gray-300">Design</p>
+                      <p class="text-sm text-gray-700 dark:text-gray-300">Use Pen and Paper.</p>
+                    </div>
+                  </div>
+                  <div class="flex-shrink-0 relative w-full h-78 overflow-hidden rounded-lg group">
+                    <img src="https://images.pexels.com/photos/392018/pexels-photo-392018.jpeg?auto=compress&cs=tinysrgb&w=800" class="w-full h-full object-cover rounded-lg group-hover:grayscale transition-all duration-700" />
+                    <div class="absolute bottom-0 left-0 w-full p-5 rounded-b-lg bg-zinc-200 dark:bg-zinc-700 transition-transform translate-x-full group-hover:translate-x-0 duration-700">
+                      <p class="text-lg text-gray-700 dark:text-gray-300">Implement</p>
+                      <p class="text-sm text-gray-700 dark:text-gray-300">Code What You Think.</p>
+                    </div>
+                  </div>
+                  
+                  <div class="flex-shrink-0 relative w-full h-78 overflow-hidden rounded-lg group">
+                    <img src="https://images.pexels.com/photos/1714202/pexels-photo-1714202.jpeg?auto=compress&cs=tinysrgb&w=800" class="w-full h-full object-cover rounded-lg group-hover:grayscale transition-all duration-700" />
+                    <div class="absolute bottom-0 left-0 w-full p-5 rounded-b-lg bg-zinc-200 dark:bg-zinc-700 transition-transform translate-y-full group-hover:translate-y-0 duration-700">
+                      <p class="text-lg text-gray-700 dark:text-gray-300">Deploy</p>
+                      <p class="text-sm text-gray-700 dark:text-gray-300">Anyone can see it.</p>
+                    </div>
+                  </div>
+                  
+
+                  <div class="flex-shrink-0 relative overflow-hidden h-[15rem] w-full group">
+                    <img src="https://images.pexels.com/photos/5384623/pexels-photo-5384623.jpeg?auto=compress&cs=tinysrgb&w=800" class="object-cover rounded-lg overflow-hidden w-[95%] h-[70%] absolute top-0 left-1.5 z-10 grayscale group-hover:grayscale-0 transition ease-linear hover:scale-95 duration-500" />
+                    <div class="bg-zinc-200 dark:bg-zinc-700 h-[91%] w-full rounded-lg absolute top-5 left-0 duration-500"></div>
+                    <div class="absolute bottom-6 left-5 transition-transform -translate-y-full group-hover:translate-y-3 duration-500">
+                        <p class="text-lg text-gray-700 dark:text-gray-300">Team</p>
+                        <p class="text-sm text-gray-700 dark:text-gray-300">Life turning point.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- flex content -->
+    <div class="bg-gray-200 dark:bg-gray-700 p-10">
+        <div class="flex flex-wrap bg-gray-300  dark:bg-gray-800 p-10">
+            <div class="p-5 w-full lg:w-1/2 md:w-2/3 sm:w-3/4 xs:w-full">
+                <div class="bg-gradient-to-r from-purple-400 to-indigo-500 h-[5rem] text-gray-800 flex items-center justify-around">Hello World!</div>
+            </div>
+            <div class="p-5 w-full lg:w-1/4 md:w-1/3 sm:w-1/4 xs:w-full">
+                <div class="bg-gradient-to-r from-purple-400 to-indigo-500 h-[5rem] text-gray-800 flex items-center justify-around">I'm</div>
+            </div>
+            <div class="p-5 w-full lg:w-1/4 md:w-1/3 sm:w-2/5 xs:w-full">
+                <div class="bg-gradient-to-r from-purple-400 to-indigo-500 h-[5rem] text-gray-800 flex items-center justify-around">Kiran</div>
+            </div>
+            <div class="p-5 w-full lg:w-1/3 md:w-2/3 sm:w-3/5 xs:w-full">
+                <div class="bg-gradient-to-r from-purple-400 to-indigo-500 h-[5rem] text-gray-800 flex items-center justify-around">Kumar Hegge</div>
+            </div>
+            <div class="p-5 w-full lg:w-2/3 md:w-full sm:w-4/5 xs:w-full">
+                <div class="bg-gradient-to-r from-purple-400 to-indigo-500 h-[5rem] text-gray-800 font-bold flex items-center justify-around">Im a Full-Stack Developer</div>
+            </div>
+            <div class="p-5 w-full lg:w-1/2 md:w-1/3 sm:w-1/5 xs:w-full">
+                <div class="bg-gradient-to-r from-purple-400 to-indigo-500 h-[5rem] text-gray-800 flex items-center justify-around">This</div>
+            </div>
+            <div class="p-5 w-full lg:w-1/2 md:w-1/3 sm:w-1/4 xs:w-full">
+                <div class="bg-gradient-to-r from-purple-400 to-indigo-500 h-[5rem] text-gray-800 flex items-center justify-around">Is</div>
+            </div>
+            <div class="p-5 w-full lg:w-2/5 md:w-1/3 sm:w-1/4 xs:w-full">
+                <div class="bg-gradient-to-r from-purple-400 to-indigo-500 h-[5rem] text-gray-800 flex items-center justify-around">Done</div>
+            </div>
+            <div class="p-5 w-full lg:w-1/5 md:w-2/3 sm:w-1/4 xs:w-full">
+                <div class="bg-gradient-to-r from-purple-400 to-indigo-500 h-[5rem] text-gray-800 flex items-center justify-around">Using</div>
+            </div>
+            <div class="p-5 w-full lg:w-2/5 md:w-1/3 sm:w-1/4 xs:w-full">
+                <div class="bg-gradient-to-r from-purple-400 to-indigo-500 h-[5rem] text-gray-800 font-bold flex items-center justify-around">Flex</div>
+            </div>
+        </div>
+
+        <div class="h-[50px]"></div>
+
+    <!-- grid content -->
+        <div class="grid gap-2 bg-gray-300 dark:bg-gray-800 lg:grid-cols-6 md:grid-cols-3 sm:grid-cols-6 p-10">
+            <div class="py-2 px-5 lg:col-span-3 md:col-span-2 sm:col-span-4">
+                <div class="bg-gradient-to-r from-violet-400 to-pink-400 h-[5rem] text-gray-800 flex items-center justify-around">Hello World!</div>
+            </div>
+            <div class="py-2 px-5 lg:col-span-1 md:col-span-1 sm:col-span-2">
+                <div class="bg-gradient-to-r from-violet-400 to-pink-400 h-[5rem] text-gray-800 flex items-center justify-around">I'm</div>
+            </div>
+            <div class="py-2 px-5 lg:col-span-2 md:col-span-1 sm:col-span-2">
+                <div class="bg-gradient-to-r from-violet-400 to-pink-400 h-[5rem] text-gray-800 flex items-center justify-around">Kiran</div>
+            </div>
+            <div class="py-2 px-5 lg:col-span-2 md:col-span-2 sm:col-span-4">
+                <div class="bg-gradient-to-r from-violet-400 to-pink-400 h-[5rem] text-gray-800 flex items-center justify-around">Kumar Hegge</div>
+            </div>
+            <div class="py-2 px-5 lg:col-span-4 md:col-span-3 sm:col-span-6">
+                <div class="bg-gradient-to-r from-violet-400 to-pink-400 h-[5rem] text-gray-800 font-bold flex items-center justify-around">Im a Full-Stack Developer</div>
+            </div>
+            <div class="py-2 px-5 lg:col-span-3 md:col-span-2 sm:col-span-3">
+                <div class="bg-gradient-to-r from-violet-400 to-pink-400 h-[5rem] text-gray-800 flex items-center justify-around">This</div>
+            </div>
+            <div class="py-2 px-5 lg:col-span-3 md:col-span-1 sm:col-span-1">
+                <div class="bg-gradient-to-r from-violet-400 to-pink-400 h-[5rem] text-gray-800 flex items-center justify-around">Is</div>
+            </div>
+            <div class="py-2 px-5 lg:col-span-2 md:col-span-1 sm:col-span-2">
+                <div class="bg-gradient-to-r from-violet-400 to-pink-400 h-[5rem] text-gray-800 flex items-center justify-around">Done</div>
+            </div>
+            <div class="py-2 px-5 lg:col-span-2 md:col-span-1 sm:col-span-3">
+                <div class="bg-gradient-to-r from-violet-400 to-pink-400 h-[5rem] text-gray-800 flex items-center justify-around">Using</div>
+            </div>
+            <div class="py-2 px-5 lg:col-span-2 md:col-span-1 sm:col-span-3">
+                <div class="bg-gradient-to-r from-violet-400 to-pink-400 h-[5rem] text-gray-800 font-bold flex items-center justify-around">Grid</div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var dropdownContent = document.getElementById("dropdownContent");
+        var content = document.getElementById("profileContent");
+        var setDarkTheme = document.getElementById("main");
+        var isHidden = false, isDark, checkDark = true;
+        
+        function dropdown() {
+            isHidden = !isHidden;
+            if (isHidden) {
+                dropdownContent.classList.remove("hidden");
+            } else {
+                dropdownContent.classList.add("hidden");
+            }
+        }
+        function profile() {
+            isHidden = !isHidden;
+            if (isHidden) {
+                profileContent.classList.remove("hidden");
+            } else {
+                profileContent.classList.add("hidden");
+            }
+        }
+        function darkTheme() {
+            isDark = checkDark;
+            checkDark = !isDark;
+            if(isDark){
+                setDarkTheme.classList.add("dark");
+            }
+            else{
+                setDarkTheme.classList.remove("dark");
+            }
+        }
+    </script>
+</body>
+</html>
